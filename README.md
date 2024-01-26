@@ -62,3 +62,14 @@ Al resolver todos los errores que hacia falta de instalar algunas librerias, ya 
   ```bash
   flutterfire configure
   ```
+- Colocamos el codigo necesario para cada archivo y cada funcionalidad
+  Por ultimo vemos la aplicacion ya ejecutada:
+
+- Parte de iniciar sesion
+  
+  [![f1.jpg](https://i.postimg.cc/R0PGtNBK/f1.jpg)](https://postimg.cc/f39xnWkR)
+- Parte del home
+  
+  [![f2.jpg](https://i.postimg.cc/43nVrPDH/f2.jpg)](https://postimg.cc/qtVNKsMp)
+- Parte de registrar
+  [![f3.jpg](https://i.postimg.cc/gcBFp2Lw/f3.jpg)](https://postimg.cc/Sj8t7qrq)
