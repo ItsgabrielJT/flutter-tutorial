@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411561204262",
+    "project_id": "fluuter-sets",
+    "storage_bucket": "fluuter-sets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411561204262:android:36d38cc1ffbf56c24164e7",
+        "android_client_info": {
+          "package_name": "com.example.gtk_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBZO4BKQOgTx1oQjsPh4EgDSW7pdydd6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
