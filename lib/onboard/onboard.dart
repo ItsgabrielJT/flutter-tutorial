@@ -22,7 +22,7 @@ class _OnboardPageState extends State<OnboardPage>
       <Map<String, dynamic>>[
         <String, dynamic>{
           'image': '1.json',
-          'text': 'Perfiles',
+          'text': 'Turisticas',
         },
       ];
 
