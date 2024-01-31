@@ -4,6 +4,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../theme/theme.dart';
+
 class Header extends StatelessWidget {
   const Header(this.heading, {super.key});
   final String heading;
@@ -58,10 +60,46 @@ class StyledButton extends StatelessWidget {
   final void Function() onPressed;
 
   @override
-  Widget build(BuildContext context) => OutlinedButton(
-        style: OutlinedButton.styleFrom(
-            side: const BorderSide(color: Colors.deepPurple)),
-        onPressed: onPressed,
-        child: child,
-      );
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 80),
+      child:  Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 5,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          width: 1,
+                          color: AppColor.primary,
+                        ),
+                      ),
+                      child: TextButton(
+                        style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                        onPressed: onPressed,
+                        child: child
+                      ),
+                    ),
+                    
+                  ],
+                ),
+              ],
+            )
+       
+    );
+  }
 }

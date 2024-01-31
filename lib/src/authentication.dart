@@ -4,7 +4,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter/cupertino.dart';
 
+import '../home_page.dart';
+import '../theme/theme.dart';
 import 'widgets.dart';
 
 class AuthFunc extends StatelessWidget {
@@ -22,12 +25,20 @@ class AuthFunc extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 24, bottom: 8),
+          padding: const EdgeInsets.only(left: 64, bottom: 8),
           child: StyledButton(
               onPressed: () {
                 !loggedIn ? context.push('/sign-in') : signOut();
               },
-              child: !loggedIn ? const Text('RSVP') : const Text('Logout')),
+              child: !loggedIn
+                  ? const Text(
+                      'login',
+                      style: TextStyle(color: AppColor.primary, fontSize: 20),
+                    )
+                  : const Text(
+                      'Logout',
+                      style: TextStyle(color: AppColor.primary, fontSize: 20),
+                    )),
         ),
         Visibility(
           visible: loggedIn,
@@ -35,9 +46,19 @@ class AuthFunc extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24, bottom: 8),
             child: StyledButton(
                 onPressed: () {
-                  context.push('/profile');
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute<Widget>(
+                      builder: (BuildContext context) => HomePage(
+                        key: key,
+                      ),
+                    ),
+                  );
                 },
-                child: const Text('Profile')),
+                child: const Text(
+                  'Secciones',
+                  style: TextStyle(color: AppColor.primary, fontSize: 20),
+                )),
           ),
         )
       ],

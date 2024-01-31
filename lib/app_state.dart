@@ -7,7 +7,6 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-import 'guest_book_message.dart';  
 
 enum Attending { yes, no, unknown }
 
@@ -40,8 +39,6 @@ set attending(Attending attending) {
   bool get emailVerified => _emailVerified;
 
   StreamSubscription<QuerySnapshot>? _guestBookSubscription;
-  List<GuestBookMessage> _guestBookMessages = [];
-  List<GuestBookMessage> get guestBookMessages => _guestBookMessages;
 
   Future<void> init() async {
     await Firebase.initializeApp(
@@ -71,15 +68,7 @@ set attending(Attending attending) {
             .orderBy('timestamp', descending: true)
             .snapshots()
             .listen((snapshot) {
-          _guestBookMessages = [];
-          for (final document in snapshot.docs) {
-            _guestBookMessages.add(
-              GuestBookMessage(
-                name: document.data()['name'] as String,
-                message: document.data()['text'] as String,
-              ),
-            );
-          }
+         
           notifyListeners();
         });
         // Add from here...
@@ -103,7 +92,6 @@ set attending(Attending attending) {
       } else {
         _loggedIn = false;
         _emailVerified = false;
-        _guestBookMessages = [];
         _guestBookSubscription?.cancel();
         _attendingSubscription?.cancel(); // new
       }

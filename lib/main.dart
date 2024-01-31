@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';                 // new
 
 import 'app_state.dart';                                 // new
 import 'home_page.dart';
+import 'onboard/onboard.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,7 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const HomePage(),
+      builder: (context, state) => const OnboardPage(),
       routes: [
         GoRoute(
           path: 'sign-in',
@@ -79,16 +80,9 @@ final _router = GoRouter(
           ],
         ),
         GoRoute(
-          path: 'profile',
-          builder: (context, state) {
-            return ProfileScreen(
-              providers: const [],
-              actions: [
-                SignedOutAction((context) {
-                  context.pushReplacement('/');
-                }),
-              ],
-            );
+          path: 'secciones',
+          builder: (context, GoRouterState state) {
+            return const HomePage();
           },
         ),
       ],
@@ -104,12 +98,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Firebase Meetup',
+      title: 'Catalog places',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         buttonTheme: Theme.of(context).buttonTheme.copyWith(
-              highlightColor: Colors.deepPurple,
+              highlightColor: Colors.deepOrange,
             ),
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.deepOrange,
         textTheme: GoogleFonts.robotoTextTheme(
           Theme.of(context).textTheme,
         ),
