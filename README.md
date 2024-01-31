@@ -75,4 +75,4 @@ Al resolver todos los errores que hacia falta de instalar algunas librerias, ya 
   [![f3.jpg](https://i.postimg.cc/gcBFp2Lw/f3.jpg)](https://postimg.cc/Sj8t7qrq)
 
 ## APK
-[Drive]([URL_del_enlac](https://drive.google.com/file/d/12-q5FLWxkwk8XPNNd8ykMVsbD5r5vh6_/view?usp=sharing)https://drive.google.com/file/d/12-q5FLWxkwk8XPNNd8ykMVsbD5r5vh6_/view?usp=sharing)
+[Drive](https://drive.google.com/file/d/12-q5FLWxkwk8XPNNd8ykMVsbD5r5vh6_/view?usp=sharing)https://drive.google.com/file/d/12-q5FLWxkwk8XPNNd8ykMVsbD5r5vh6_/view?usp=sharing)
